@@ -37,7 +37,7 @@ namespace csharpProje
         }
 
 
-        public void urunEkle(String table,String columns,String values)
+        public void Insert(String table,String columns,String values)
         {
             String query = "INSERT INTO "+table+" ("+columns+") VALUES ("+values+")";
 
@@ -53,7 +53,7 @@ namespace csharpProje
             catch{}
         }
 
-        public void urunSil(String table, String where)
+        public void delete(String table, String where)
         {
             String query = "DELETE FROM "+table+" WHERE "+where;
 
@@ -72,7 +72,7 @@ namespace csharpProje
             }
         }
 
-        public void urunGuncelle(String table,String set, String where)
+        public void update(String table,String set, String where)
         {
             String query = "UPDATE "+table+" SET "+set+" WHERE "+where;
 
@@ -91,7 +91,7 @@ namespace csharpProje
             }
         }
 
-        public DataTable urunGetir(String table, String where)
+        public DataTable select(String table, String where)
         {
             String query = "SELECT * FROM " + table +" WHERE "+where;
             DataTable table = new DataTable();
@@ -113,7 +113,7 @@ namespace csharpProje
             return table;
         }
 
-        public DataTable urunGetir(String table)
+        public DataTable select(String table)
         {
             String query = "SELECT * FROM " + table;
             DataTable table = new DataTable();
@@ -135,7 +135,7 @@ namespace csharpProje
             return table;
         }
 
-        public DataTable urunGetir(String table,String where,String like)
+        public DataTable select(String table,String where,String like)
         {
             String query = "SELECT * FROM " + table+" WHERE "+where+" LIKE '%"+like+"%'";
             DataTable table = new DataTable();
