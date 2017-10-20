@@ -15,7 +15,7 @@ namespace csharpProje
 
         public MySqlConnection mysqlCon = null;
 
-        public Boolean BaglantiAc(){
+        public Boolean OpenCon(){
             mysqlCon = new MySqlConnection("Server=Server;Database=database;Uid=username;Pwd='password';");
             try
             {
@@ -43,7 +43,7 @@ namespace csharpProje
 
             try
             {
-                if (this.BaglantiAc())
+                if (this.OpenCon())
                 {
                     MySqlCommand command = new MySqlCommand(query,mysqlCon);
                     command.ExecuteNonQuery();
@@ -59,7 +59,7 @@ namespace csharpProje
 
             try
             {
-                if (this.BaglantiAc())
+                if (this.OpenCon())
                 {
                     MySqlCommand command = new MySqlCommand(query, mysqlCon);
                     command.ExecuteNonQuery();
@@ -78,7 +78,7 @@ namespace csharpProje
 
             try
             {
-                if (this.BaglantiAc())
+                if (this.OpenCon())
                 {
                     MySqlCommand command = new MySqlCommand(query, mysqlCon);
                     command.ExecuteNonQuery();
@@ -97,7 +97,7 @@ namespace csharpProje
             DataTable table = new DataTable();
             try
             {
-                if (this.BaglantiAc())
+                if (this.OpenCon())
                 {
                     MySqlCommand command = new MySqlCommand(query, mysqlCon);
                     MySqlDataAdapter adapter = new MySqlDataAdapter(command);
@@ -119,7 +119,7 @@ namespace csharpProje
             DataTable table = new DataTable();
             try
             {
-                if (this.BaglantiAc())
+                if (this.OpenCon())
                 {
                     MySqlCommand command = new MySqlCommand(query, mysqlCon);
                     MySqlDataAdapter adapter = new MySqlDataAdapter(command);
@@ -141,7 +141,7 @@ namespace csharpProje
             DataTable table = new DataTable();
             try
             {
-                if (this.BaglantiAc())
+                if (this.OpenCon())
                 {
                     MySqlCommand command = new MySqlCommand(query, mysqlCon);
                     MySqlDataAdapter adapter = new MySqlDataAdapter(command);
